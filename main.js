@@ -25,6 +25,7 @@ function getUser(id) {
       userAvatar.src = data.avatar
       userName.textContent = data.name
       userCity.textContent = data.city
+      userID.textContent = data.id
     })
     .catch(e => console.error(e))
 }
