@@ -50,7 +50,7 @@ const newUser = {
   city: "SP"
 }
 
-userUpdated = {
+const userUpdated = {
   name: "Marcelo Calvinho",
   avatar: "https://picsum.photos/250/250",
   city: "Recife"
