@@ -8,4 +8,19 @@ function getUsers() {
     .catch(e => console.error(e))
 }
 
+function addNewUser(newUser) {
+  axios.post(url, newUser)
+    .then(response => {
+      console.log(response)
+    })
+    .catch(e =>console.error(e))
+}
+
+const newUser = {
+  name: "Henrique Ferreira",
+  avatar: "https://avatars.githubusercontent.com/u/62857389?v=4",
+  city: "SP"
+}
+
 getUsers()
+addNewUser(newUser)
