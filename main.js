@@ -8,12 +8,25 @@ function getUsers() {
     .catch(e => console.error(e))
 }
 
+// POST
 function addNewUser(newUser) {
   axios.post(url, newUser)
     .then(response => {
       console.log(response)
     })
     .catch(e =>console.error(e))
+}
+
+// GET com Parametros
+function getUser(id) {
+  axios.get(`${url}/${id}`)
+    .then(response => {
+      const data = response.data
+      userAvatar.src = data.avatar
+      userName.textContent = data.name
+      userCity.textContent = data.city
+    })
+    .catch(e => console.error(e))
 }
 
 const newUser = {
@@ -23,4 +36,5 @@ const newUser = {
 }
 
 getUsers()
-addNewUser(newUser)
+// addNewUser(newUser)
+getUser(1)
