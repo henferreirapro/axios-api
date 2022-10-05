@@ -1,0 +1,10 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#userAvatar {
+  max-width: 300px;
+  border-radius: 25%;
+}
